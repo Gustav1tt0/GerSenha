@@ -11,15 +11,15 @@ class Application():
         root.mainloop()
     def janela(self):
         self.root.title("Gerador de senhas")
-        self.root.configure(background= 'grey10')
+        self.root.configure(background= 'grey')
         self.root.geometry("400x400")
         self.root.resizable(True, True)
     def dados(self):
 
         ## Criação da label e entrada do Quantidade de caracteres
         self.quantcare = IntVar()
-        self.lb_quantcare1 = Label(text="Insira abaixo a quantidade de caracteres que deseja para criar sua senha ", bg='blue', fg='#00FFFF')
-        self.lb_quantcare1.place(relx=0.02, rely=0.15)
+        self.lb_quantcare1 = Label(text="Insira a quantidade de caracteres que deseja para criar sua senha ", bg='grey5', fg='white')
+        self.lb_quantcare1.place(relx=0.05, rely=0.07, relwidth=0.9, relheight=0.05)
         self.quantcare1_entry = Entry(textvariable=self.quantcare)
         self.quantcare1_entry.place(relx=0.40, rely=0.25, relwidth=0.12)
         # Resultado
@@ -30,7 +30,7 @@ class Application():
         self.resultado1.place(relx=0.31, rely=0.35, relwidth=0.3)
 
         ### Criação do botao Gerar senha
-        self.bt_geralsenha1 = Button(text="Gerar senha", bd=2, bg='blue', fg='#00FFFF'
+        self.bt_geralsenha1 = Button(text="Gerar senha", bd=2, bg='gray10', fg='white'
                                 , font=('verdana', 8, 'bold'), command=self.gerarsenha)
         self.bt_geralsenha1.place(relx=0.31, rely=0.50, relwidth=0.3, relheight=0.1)
     def gerarsenha(self):
